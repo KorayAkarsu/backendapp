@@ -2,8 +2,9 @@ const mongoose = require("mongoose");
 
 const schema = mongoose.Schema(
   {
+    name: { type: String, required: true },
     is_active: { type: Boolean, defual: true },
-    created_by: { type: mongoose.SchemaTypes.ObjectId, require: true },
+    created_by: { type: mongoose.SchemaTypes.ObjectId },
   },
   {
     versionKey: false,
